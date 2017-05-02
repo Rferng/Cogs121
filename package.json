@@ -5,7 +5,11 @@
     "node": "6.10.2"
   },
   "description": "A hide and seek style game with ghosts and seekers.",
-  "main": "/GhostTag/index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
   "dependencies": {
     "pug": "^2.0.0-beta.12"
   },
