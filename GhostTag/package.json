@@ -10,8 +10,8 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.13.3",
     "body-parser": "^1.15.2",
+    "express": "^4.13.3",
     "pug": "^2.0.0-beta6",
     "request": "^2.75.0"
   },
