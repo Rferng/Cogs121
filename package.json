@@ -5,7 +5,7 @@
     "node": "6.10.2"
   },
   "description": "A hide and seek style game with ghosts and seekers.",
-  "main": "index.js",
+  "main": "/GhostTag/index.js",
   "dependencies": {
     "pug": "^2.0.0-beta.12"
   },
