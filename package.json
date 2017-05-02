@@ -1,28 +1,33 @@
 {
-  "name": "Ghost Tag",
+  "name": "ghosttag",
   "version": "0.2.5",
   "description": "",
   "engines": {
     "node": "5.9.1"
   },
+
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
+
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.13.3",
     "pug": "^2.0.0-beta6",
     "request": "^2.75.0"
   },
+
   "repository": {
     "type": "git",
     "url": "https://github.com/Rferng/Cogs121"
   },
+
   "keywords": [
     "node",
     "heroku",
     "express"
   ],
+  
   "license": "MIT"
 }
