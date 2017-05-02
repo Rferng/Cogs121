@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 
-app.get('/index', function(request, response) {
+app.get('/', function(request, response) {
   response.render('index',
             { title: 'Homepage', message: 'Yo Yo'});
 });
