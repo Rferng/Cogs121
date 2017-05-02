@@ -1,0 +1,75 @@
+extends layout
+
+block content
+    h1(class='testHome text-center') #[strong Ghost Tag]
+    h4(class='text-center') Tell Others How Your Game Went!
+    
+    input(id="input-id" class="center-block")
+        
+        
+    h4(class='text-center') How difficult was the route you made?
+
+    div(class="button-group-wrapper")
+        div(class="btn-group btn-group-justified" id="traffic-group" role="group" aria-label="...")
+            div(class="btn-group" role="group")
+                button(type="button" class="btn btn-default") Easy
+            div(class="btn-group" role="group")
+                button(type="button" class="btn btn-default") Medium
+            div(class="btn-group" role="group")
+                button(type="button" class="btn btn-default") Hard
+    
+    
+    h4(class="text-center") Duration of the Trip: #[strong 5:23]
+                    
+    h4(class="text-center") Anything else you'd like to add?
+    
+    div(class="form-group")
+        textarea(class="form-control" rows="5" id="comment")
+        
+        
+    
+    div(class="center-block button-wrapper text-center")
+        button(type="button" id="cancel" class="btn btn-danger") Cancel
+        button(type="button" id="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal") Submit
+    
+    div(id="myModal" class="modal fade" role="dialog")
+        div(class="modal-dialog")
+
+            div(class="modal-content")
+                div(class="modal-header")
+                    button(type="button" class="close" data-dismiss="modal")
+                    h4(class="modal-title")
+                        div(class="modal-body")
+                            p Response Submited!
+                            div(class="modal-footer")
+                                button(type="button" id="close" class="btn btn-default" data-dismiss="modal")  Close
+
+    script(type="text/javascript").
+        window.onload = function() {
+
+            // initialize with defaults
+            $("#input-id").rating({showCaption: false,
+                                   clearButton: ""});
+
+            $("#traffic-group .btn").click(function() {
+                $("#traffic-group .btn").removeClass("active");
+                $(this).addClass("active");
+            });
+
+
+            $("#time-group .btn").click(function() {
+              $("#time-group .btn").removeClass("active");
+              $(this).addClass("active");
+            });
+
+            document.getElementById("close").onclick = function() {
+                location.href = "/select";
+            };
+            
+
+            document.getElementById("cancel").onclick = function() {
+                location.href = "/record";
+            };
+        };
+        
+    
