@@ -2,6 +2,10 @@ h1 {
     color: black;
 }
 
+body {
+  background: url(background.jpg)
+} 
+
 .rating-container {
     text-align: center;
 }
