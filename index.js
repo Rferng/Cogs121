@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var path = require('path');
 var bodyParser = require('body-parser')
 
 app.set('port', (process.env.PORT || 3000));
@@ -7,7 +8,7 @@ app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
-app.set('views', 'views');
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 
