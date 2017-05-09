@@ -20,22 +20,22 @@ app.use(bodyParser.json());
 
 app.get('/', function(request, response) {
   response.render('index',
-            { title: 'Homepage', message: 'Yo Yo'});
+            { title: 'Ghost Tag',});
 });
 
 app.get('/select', function(request, response) {
   response.render('select',
-            { title: 'Select an Option',});
+            { title: 'Choose Your Role',});
 });
 
 app.get('/record', function(request, response) {
   response.render('record',
-            { title: 'Record a Route',});
+            { title: 'Hide!',});
 });
 
 app.get('/find', function(request, response) {
   response.render('find',
-            { title: 'Find a route',});
+            { title: 'Seek the Ghost',});
 });
 
 app.get('/rate', function(request, response) {
