@@ -14,3 +14,4 @@ Hon Lao - Helped worked on the javascript with Karthik. Revised and made it easi
 
 
 ![Core Functionality Screenshot](/images/seekerpins.png)
+Initially, we had a line which the seeker can follow. The problem with that is that it isn't very engaging. These are the multiple areas where the ghost has been. We randomly pick a few areas where the ghost had been for the seeker to go to and search for the ghost. 
