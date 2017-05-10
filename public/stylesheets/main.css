@@ -3,8 +3,19 @@ h1 {
 }
 
 body {
-  background: url(background.jpg)
+  background: url(background.jpg);
+  background-size: cover;
 } 
+
+#main{
+  text-align: center;
+  margin-top: 250px;
+}
+
+#options{
+  text-align: auto;
+  margin-left: 500px;
+}
 
 .rating-container {
     text-align: center;

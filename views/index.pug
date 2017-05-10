@@ -1,17 +1,16 @@
 extends layout
 
 block content
-    h1(class='testHome text-center') #[strong Ghost Tag]
-    h3(class= 'testHome text-center') A hide and seek game.
+    #main.container
+        h1(class='testHome text-center') #[strong Ghost Tag]
+        h3(class= 'testHome text-center') A hide and seek game.
 
-    //p(class= 'text-center') Click #[a(href="/select") here] to get started!
-
-    <br>
-    button(type="button" id="start" class="btn btn-success center-block") Play
-    
-    script(type='text/javascript').
-        window.onload = function () {
-            document.getElementById("start").onclick = function(){
-                location.href = "/select" 
+        <br>
+        button(type="button" id="start" class="btn btn-success center-block") Play
+        
+        script(type='text/javascript').
+            window.onload = function () {
+                document.getElementById("start").onclick = function(){
+                    location.href = "/select" 
+                };
             };
-        };
