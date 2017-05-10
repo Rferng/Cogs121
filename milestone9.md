@@ -13,4 +13,4 @@ Hon Lao - Helped worked on the javascript with Karthik. Revised and made it easi
 
 
 
-![Core Functionality Screenshot](/images/seekerpins)
+![Core Functionality Screenshot](/images/seekerpins.PNG)
