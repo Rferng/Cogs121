@@ -4,14 +4,14 @@ block content
     #main.container
         h1(class='testHome text-center') #[strong Ghost Tag]
         h3(class= 'testHome text-center') A hide and seek game.
-
+        br
         body
             button(onclick="document.getElementById('id01').style.display='block'", style='width:auto;') Login
             #id01.modal
               form.modal-content.animate(action='/select')
                 .imgcontainer
-                    span.close(onclick="document.getElementById('id01').style.display='none'", title='Close Modal')
-                    img.avatar(src='/images/ghosttag.png', alt='Avatar')
+                span.close(onclick="document.getElementById('id01').style.display='none'", title='Close Modal')
+                img.avatar(src='/images/ghosttag.png', alt='Avatar')
 
                 .container
                   label
