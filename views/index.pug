@@ -5,12 +5,38 @@ block content
         h1(class='testHome text-center') #[strong Ghost Tag]
         h3(class= 'testHome text-center') A hide and seek game.
 
-        <br>
-        button(type="button" id="start" class="btn btn-success center-block") Play
-        
-        script(type='text/javascript').
-            window.onload = function () {
-                document.getElementById("start").onclick = function(){
-                    location.href = "/select" 
-                };
-            };
+        body
+            button(onclick="document.getElementById('id01').style.display='block'", style='width:auto;') Login
+            #id01.modal
+              form.modal-content.animate(action='/select')
+                .imgcontainer
+                    span.close(onclick="document.getElementById('id01').style.display='none'", title='Close Modal')
+                    img.avatar(src='/images/ghosttag.png', alt='Avatar')
+
+                .container
+                  label
+                    b Player Name
+                  input(type='text', placeholder='Enter Username', name='uname')
+                  label
+                    b Password
+                  input(type='password', placeholder='Enter Password', name='psw')
+                  button(type='submit' id='start') Login
+                  input(type='checkbox', checked='checked')
+                  |  Remember me
+                .container(style='background-color:#f1f1f1')
+                  button.cancelbtn(type='button', onclick="document.getElementById('id01').style.display='none'") Cancel
+                    script.
+                          // Get the modal
+                          var modal = document.getElementById('id01');
+                          // When the user clicks anywhere outside of the modal, close it
+                          window.onclick = function(event) {
+                          if (event.target == modal) {
+                          modal.style.display = "none";
+                          }
+                          }
+                    script(type='text/javascript').
+                            window.onload = function () {
+                                document.getElementById("start").onclick = function(){
+                                    location.href = "/select" 
+                                };
+                            };
