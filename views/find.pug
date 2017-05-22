@@ -15,7 +15,35 @@ block content
       height: 100%;
       margin: 0;
       padding: 0;
-      }  
+      } 
+      /* Always set the map height explicitly to define the size of the div
+      * element that contains the map. */
+      #map {
+      height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      }
+      #floating-panel {
+      position: absolute;
+      top: 700px;
+      left: 48%;
+      z-index: 5;
+      padding: 5px;
+      text-align: center;
+      font-family: 'Roboto','sans-serif';
+      line-height: 30px;
+      padding-left: 10px;
+      }
+      #floating-panel {
+      margin-left: -52px;
+      }
+
+    #floating-panel
+      button#found.btn.btn-lg.btn-primary(type='button') Found The Hider!
     body
     #map
     script.
@@ -30,25 +58,38 @@ block content
       map: map,
       icon: image
       });
+      var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
       var beachMarker = new google.maps.Marker({
       position: {lat: 32.880799, lng: -117.237511},
       map: map,
       icon: image
       });
+      var image = 'https://www.google.com/mapfiles/marker.png';
       var beachMarker = new google.maps.Marker({
       position: {lat: 32.877718, lng: -117.237565},
       map: map,
       icon: image
       });
+      var image = 'https://www.google.com/mapfiles/marker.png';
       var beachMarker = new google.maps.Marker({
       position: {lat: 32.878276, lng: -117.239335},
       map: map,
       icon: image
       });
+      var image = 'https://www.google.com/mapfiles/marker.png';
       var beachMarker = new google.maps.Marker({
       position: {lat: 32.878959, lng: -117.236044},
       map: map,
       icon: image
       });       
       }
+    script(type='text/javascript').
+      window.onload = function () {
+        document.getElementById("found").onclick = function(){
+          location.href = "/rate" 
+      };
+          };
+
+
+
     script(async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyC4Mdmwz4M0GbhDNj1PwjTnQ7FTx-wOLic&libraries=places&callback=initMap").
