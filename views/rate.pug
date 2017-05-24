@@ -1,6 +1,50 @@
 extends layout
 
 block content
+    head
+    style.
+      body {margin:0;}
+      ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      }
+      li {
+      float: left;
+      }
+      li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      }
+      li a:hover:not(.active) {
+      background-color: #111;
+      }
+      .active {
+      background-color: #4CAF50;
+      }
+    body
+        ul
+          li
+            a(href='/') Home
+          li
+            a(href='/select') Start
+          li
+            a(href='/record') Hider
+          li
+            a(href='/find') Seeker
+          li
+            a.active(href='/rate') Rate
+        br
+        br
+
     h1(class='testHome text-center') #[strong Ghost Tag]
     h4(class='text-center') Tell Others How Your Game Went!
     
@@ -12,11 +56,11 @@ block content
     div(class="button-group-wrapper")
         div(class="btn-group btn-group-justified" id="traffic-group" role="group" aria-label="...")
             div(class="btn-group" role="group")
-                button(type="button" class="btn btn-default") Easy
+                button(type="button" class="btn btn-success") Easy
             div(class="btn-group" role="group")
-                button(type="button" class="btn btn-default") Medium
+                button(type="button" class="btn btn-warning") Medium
             div(class="btn-group" role="group")
-                button(type="button" class="btn btn-default") Hard
+                button(type="button" class="btn btn-danger") Hard
     
     
     h4(class="text-center") Duration of the Trip: #[strong 5:23]
@@ -65,7 +109,7 @@ block content
             
 
             document.getElementById("cancel").onclick = function() {
-                location.href = "/record";
+                location.href = "/select";
             };
         };
         
