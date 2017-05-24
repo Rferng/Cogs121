@@ -1,13 +1,14 @@
-**Milestone 11**
+**Milestone 13**
 
-Karthik Komatineni - Created login page that 
-![Core Functionality Screenshot](/images/milestone11/login.PNG)
-Danny Dang - Simplified select page
-![Core Functionality Screenshot](/images/milestone11/select.PNG)
+Karthik Komatineni - Added a navbar to a few pages to help navigation across the game. Also cleaned up text on the role choosing page to be consistent with the game idea.
+![Core Functionality Screenshot](/images/navbar.PNG)
+![Core Functionality Screenshot](/images/hideseekchoose.PNG)
 
-Robert Ferng - reworked feedback page
-![Core Functionality Screenshot](/images/milestone11/feedback.PNG)
+Danny Dang - Added the found hider and made it properly align with the rest of the page without pushing elements around.
+![Core Functionality Screenshot](/images/foundhider.PNG)
 
-Hon Lao -  redesign and implemented asethetic elements of ui
-![Core Functionality Screenshot](/images/milestone11/Capture.PNG)
+Robert Ferng - Reiterated on the feedback/rate page. Made buttons the correct size and color coded each of the potential options.
+![Core Functionality Screenshot](/images/cleanupratepage.PNG)
+
+Hon Lao
 
