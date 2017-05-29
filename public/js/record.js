@@ -118,7 +118,7 @@ $(document).ready(function() {
                     }
                 });
 
-                location.href = "/rate";
+                location.href = "/wait";
             }
         });
     }
@@ -199,4 +199,3 @@ function distance(lat1, lng1, lat2, lng2) {
 function ToRadians(degree) {
    return (degree * (Math.PI / 180));
 }
-

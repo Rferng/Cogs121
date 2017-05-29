@@ -1,0 +1,84 @@
+extends layout
+
+block content
+    head
+    style.
+      body {margin:0;}
+      ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      }
+      li {
+      float: left;
+      }
+      li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      }
+      li a:hover:not(.active) {
+      background-color: #111;
+      }
+      .active {
+      background-color: #4CAF50;
+      }
+    body
+        ul
+          li
+            a(href='/') Home
+          li
+            a.active(href='/select') Start
+          li
+            a(href='/record') Hider
+          li
+            a(href='/find') Seeker
+          li
+            a(href='/rate') Rate
+          
+    br
+    br
+    h1(class='testHome text-center') #[strong Ghost Tag]
+    h3(class='text-center') Time Left For Seeker to Find You! 
+
+    br
+    #progressBar
+      div
+
+    script.
+      function progress(timeleft, timetotal, $element) {
+        var progressBarWidth = timeleft * $element.width() / timetotal;
+          $element.find('div').animate({
+          width: progressBarWidth
+        }, 500).html(timeleft + " seconds to go");
+        if (timeleft > 0) {
+          setTimeout(function() {
+            progress(timeleft - 1, timetotal, $element);
+          }, 1000);
+        }
+      };
+      progress(300, 300, $('#progressBar'));
+
+    div(class="text-center")
+        button(type="button" id="lose" class="btn btn-danger") Seeker Found Me!
+        button(type="button" id="win" class="btn btn-success" data-toggle="modal" data-target="#myModal") Seeker Did No Find Me! 
+
+    script(type="text/javascript").
+        window.onload = function() {
+
+            document.getElementById("lose").onclick = function() {
+                location.href = "/rate";
+            };
+            
+
+            document.getElementById("win").onclick = function() {
+                location.href = "/rate";
+            };
+        };

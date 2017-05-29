@@ -43,6 +43,11 @@ app.get('/rate', function(request, response) {
             { title: 'Rate your Route',});
 });
 
+app.get('/wait', function(request, response) {
+  response.render('wait',
+            { title: 'wait for the seeker',});
+});
+
 app.get('/navigate', function(request, response) {
 
     console.log(request.query);
