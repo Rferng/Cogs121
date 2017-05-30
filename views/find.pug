@@ -1,6 +1,23 @@
 extends layout
 
 block content
+
+    div(id="myModal" class="modal fade" role="dialog")
+      div(class="modal-dialog")
+        div(class="modal-content")
+          div(class="modal-header")
+            button(type="button" class="close" data-dismiss="modal")
+            h4(class="modal-title")
+              div(class="modal-body")
+                p You're playing as: Seeker. Find the ghost by traveling to one of the marked locations. You are given the starting point as a hint. If you think you found the ghost, confirm by making contact with the ghost and click "found the ghost". 
+                  div(class="modal-footer")
+                    button(type="button" id="close" class="btn btn-default" data-dismiss="modal")  Close
+
+    script.
+      $( document ).ready( function() {
+      $( '#myModal' ).modal( 'toggle' );
+      });
+
     meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
     meta(charset='utf-8')
     title Simple icons
@@ -60,12 +77,6 @@ block content
       map: map,
       icon: image
       });
-      var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
-      var beachMarker = new google.maps.Marker({
-      position: {lat: 32.880799, lng: -117.237511},
-      map: map,
-      icon: image
-      });
       var image = 'https://www.google.com/mapfiles/marker.png';
       var beachMarker = new google.maps.Marker({
       position: {lat: 32.877718, lng: -117.237565},
@@ -83,8 +94,16 @@ block content
       position: {lat: 32.878959, lng: -117.236044},
       map: map,
       icon: image
-      });       
+      }); 
+
+      var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+      var beachMarker = new google.maps.Marker({
+      position: {lat: 32.880799, lng: -117.237511},
+      map: map,
+      icon: image
+      });      
       }
+      
     script(type='text/javascript').
       window.onload = function () {
         document.getElementById("found").onclick = function(){
