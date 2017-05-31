@@ -47,8 +47,10 @@ block content
         h1(class='testHome text-center') #[strong Ghost Tag]
         h3(class= 'testHome text-center') A hide and seek game.
         br
+        br
+       
         body
-            button(onclick="document.getElementById('id01').style.display='block'", style='width:auto;') Login
+            button(onclick="document.getElementById('id01').style.display='block'", style='width:auto;') Join Game
             #id01.modal
               form.modal-content.animate(action='/select')
                 .imgcontainer
@@ -57,14 +59,14 @@ block content
 
                 .container
                   label
-                    b Player Name
-                  input(type='text', placeholder='Enter Username', name='uname')
+                    b Room Name
+                  input(type='text', placeholder='Enter Room Name', name='uname')
                   label
                     b Password
                   input(type='password', placeholder='Enter Password', name='psw')
-                  button(type='submit' id='start') Login
+                  button(type='submit' id='start') Join
                   input(type='checkbox', checked='checked')
-                  |  Remember me
+                  |  Remember room
                 .container(style='background-color:#f1f1f1')
                   button.cancelbtn(type='button', onclick="document.getElementById('id01').style.display='none'") Cancel
                     script.

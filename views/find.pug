@@ -5,13 +5,16 @@ block content
     div(id="myModal" class="modal fade" role="dialog")
       div(class="modal-dialog")
         div(class="modal-content")
-          div(class="modal-header")
+          div(class="modal-header" style="text-align: center")
+            h3 Playing as: Seeker
             button(type="button" class="close" data-dismiss="modal")
             h4(class="modal-title")
               div(class="modal-body")
-                p You're playing as: Seeker. Find the ghost by traveling to one of the marked locations. You are given the starting point as a hint. If you think you found the ghost, confirm by making contact with the ghost and click "found the ghost". 
-                  div(class="modal-footer")
-                    button(type="button" id="close" class="btn btn-default" data-dismiss="modal")  Close
+                p Seek!
+                p Find the ghost by searching the marked locations. You're given the starting point and the ghost can be at any of the other locations. If you think you've found the ghost, confirm by making contact with the ghost and click "Found the Ghost".
+            
+            div(class="modal-footer")
+              button(type="button" id="close" class="btn btn-success text-center" data-dismiss="modal")  Close
 
     script.
       $( document ).ready( function() {
@@ -25,44 +28,40 @@ block content
       /* Always set the map height explicitly to define the size of the div
       * element that contains the map. */
       #map {
-      height: 100%;
+        height: 100%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
+        height: 100%;
+        margin: 0;
+        padding: 0;
       } 
       /* Always set the map height explicitly to define the size of the div
       * element that contains the map. */
       #map {
-      height: 100%;
+        height: 100%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      }
-      #floating-panel {
-      position: fixed;
-      bottom: 5px;
-      left: 0;
-      right: 0;
-      height: 50px;
-      z-index: 5;
-      padding: 5px;
-      text-align: center;
-      font-family: 'Roboto','sans-serif';
-      line-height: 30px;
-      padding-left: 10px;
-      }
-      #floating-panel {
-      margin-left: -52px;
+        height: 100%;
+        margin: 0;
+        padding: 0;
       }
 
+      #floating-panel {
+        position: fixed;
+        top: 90%;
+        left: 50%;
+        z-index: 3;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+      }
+      
+
     #floating-panel
-      button#found.btn-fixed.btn-lg.btn-primary(type='button') Found The Hider!
+      button#found.btn-fixed.btn-lg.btn-primary(type='button') Found the Ghost!
+
     body
     #map
     script.

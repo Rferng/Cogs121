@@ -4,13 +4,16 @@ block content
 	div(id="myModal" class="modal fade" role="dialog")
 		div(class="modal-dialog")
 			div(class="modal-content")
-				div(class="modal-header")
+				div(class="modal-header" style="text-align: center")
+					h3 Playing as: Ghost
 					button(type="button" class="close" data-dismiss="modal")
 					h4(class="modal-title")
 						div(class="modal-body")
-							p You're playing as: Ghost. Hide! Go to a variety of locations. The more places you go the more difficult it is for the seekers.
-								div(class="modal-footer")
-									button(type="button" id="close" class="btn btn-default" data-dismiss="modal")  Close
+							p Hide! 
+							p Go to a variety of locations. The more places you go the more difficult it is for the seeker to find you.
+								
+					div(class="modal-footer")
+						button(type="button" id="close" class="btn btn-success text-center" data-dismiss="modal")  Got It
 
 	script.
 		$( document ).ready( function() {

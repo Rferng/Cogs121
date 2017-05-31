@@ -9,7 +9,11 @@ body {
 
 #main{
   text-align: center;
-  margin-top: 250px;
+  margin-top: 200px;
+}
+
+#wait{
+  margin-top: 75px;
 }
 
 #options{
@@ -168,3 +172,19 @@ a.solink:hover {
   color: #428bca
 }
 
+.modal {
+   position: absolute;
+   top: 20%;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 10040;
+   overflow: auto;
+   overflow-y: auto;
+} 
+
+.modal-footer {
+  
+  text-align: center;
+  
+}
