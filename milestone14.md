@@ -12,9 +12,10 @@ Karthik Komatineni - Added a waiting page for the hider. The hider page gives a 
 
 Danny Dang - Went through and realigned elements of most pages. Changed how page elements were displayed to promote user clarity and prevent user error. Revamped the text for most of the app by making them more clear. Created the instructions that exists on the new modals on the hider and seeker pages. Made sire that elements display properly on both mobile and desktop versions of the app. 
 
-Robert Ferng -
+Robert Ferng - Changed button sizing and placement for better usability and coherence. Help reorganize content placement in rating page.
 
-Hon Lao
+Hon Lao - Implement countdown timer before rating page. Ui layout changes. 
+
 
 
 List of Features:
